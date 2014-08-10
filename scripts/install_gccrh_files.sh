@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # check arguments
 if [ ! -d "${1}" -o ! -f "${2}" ]; then
