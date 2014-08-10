@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# check arguments
+if [ ! -d "${1}" -o ! -f "${2}" ]; then
+	echo "Usage: $0 <install target prefix> <path to gccrh zip file>"
+	echo "Example: $0 /opt/toolchains/msp430-elf GCC_RH_20140508.zip"
+	exit 1
+fi
+
 INSTALL_TARGET_PREFIX=`realpath "${1}"`
 PATH_TO_ZIP=`realpath "$2"`
 
