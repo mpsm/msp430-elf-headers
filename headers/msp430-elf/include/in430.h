@@ -64,7 +64,7 @@ typedef unsigned int __istate_t;
     );\
 })
 
-#define _disable_interrupts()               __asm__ __volatile__ ("dint")
+#define _disable_interrupts()               __asm__ __volatile__ ("dint { nop")
 
 #define _enable_interrupts()                __asm__ __volatile__ ("eint { nop")
 
